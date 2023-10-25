@@ -2,36 +2,37 @@
 
 #include <random>
 
-Generator::Generator(int parPocetCisel, const int parRozsah)
-	:rozsah(parRozsah), pocetCisel(parPocetCisel), poleKladnychCisel(pocetCisel), indexPola()
+Generator::Generator(const int& parPocetCisel, const int& parRozsah)
+	:_rozsah(parRozsah), _pocetCisel(parPocetCisel)
 {
+	_poleKladnychCisel = new int[parPocetCisel];
 }
 
 void Generator::vygenerujCisla()
 {
 	std::random_device rd;
 	std::mt19937 gen(rd());
-	std::uniform_int_distribution<unsigned int> distribution(0, rozsah);
+	std::uniform_int_distribution<unsigned int> distribution(0, _rozsah);
 
-	indexPola = distribution(gen);
+	_indexPola = distribution(gen);
 
-	for (int i = 0; i < pocetCisel; ++i)
+	for (int i = 0; i < _pocetCisel; ++i)
 	{
-		poleKladnychCisel[i] = distribution(gen);
+		_poleKladnychCisel[i] = distribution(gen);
 	}
 }
 
-std::vector<unsigned> Generator::getPoleKladnychCisel()
+int* Generator::getPoleKladnychCisel()
 {
-	return poleKladnychCisel;
+	return _poleKladnychCisel;
 }
 
 int Generator::getIndexPola()
 {
-	return indexPola;
+	return _indexPola;
 }
 
 Generator::~Generator()
 {
-	poleKladnychCisel.clear();
+	delete[] _poleKladnychCisel;
 }

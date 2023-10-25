@@ -1,17 +1,16 @@
 #pragma once
-#include <vector>
 
 class Generator
 {
 private:
-	int rozsah;
-	int pocetCisel;
-	std::vector<unsigned int> poleKladnychCisel;
-	int indexPola;
+	int _rozsah = 0;
+	int _pocetCisel = 0;
+	int _indexPola = 0;
+	int* _poleKladnychCisel;
 public:
-	Generator(const int parPocetCisel, const int parRozsah);
+	Generator(const int& parPocetCisel, const int& parRozsah);
 	void vygenerujCisla();
-	std::vector<unsigned> getPoleKladnychCisel();
+	int* getPoleKladnychCisel();
 	int getIndexPola();
 	~Generator();
 };

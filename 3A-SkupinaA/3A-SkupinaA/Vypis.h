@@ -4,6 +4,6 @@
 class Vypis
 {
 public:
-	void vypis(Generator& generator, int pocetCisel);
+	void vypis(Generator* generator, int pocetCisel);
 };
 
