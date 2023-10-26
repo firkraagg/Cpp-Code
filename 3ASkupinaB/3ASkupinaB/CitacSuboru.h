@@ -5,8 +5,8 @@ class CitacSuboru
 {
 private:
 	std::ifstream* _subor = nullptr;
-	std::string _nazovSuboru;
 	int* _poleCisel = nullptr;
+	std::string _nazovSuboru;
 	int _pocetCisel;
 
 public:

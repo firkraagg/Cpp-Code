@@ -20,8 +20,8 @@ void CitacSuboru::nacitajCisla()
 		{
 			*_subor >> _poleCisel[i];
 		}
-		_subor->close();
 	}
+	_subor->close();
 }
 
 int CitacSuboru::vratNajvacsieCislo()
