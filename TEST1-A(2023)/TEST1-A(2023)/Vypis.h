@@ -5,6 +5,6 @@
 class Vypis
 {
 public:
-	void vypisCisla(PoleCisel* poleCisel);
+	static void vypisCisla(PoleCisel* poleCisel);
 };
 

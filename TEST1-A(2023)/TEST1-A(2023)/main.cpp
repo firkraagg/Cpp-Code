@@ -16,13 +16,13 @@ int main(int argc, char* argv[])
 	PoleCisel* poleCisel = new PoleCisel(pocetCisel, rozsah);
 	poleCisel->vygenerujCisla();
 
-	Vypis vypis;
-	vypis.vypisCisla(poleCisel);
+	Vypis::vypisCisla(poleCisel);
 
-	ZapisDoSuboru zapisDoSuboru("cisla.txt");
-	zapisDoSuboru.zapis(poleCisel);
+	ZapisDoSuboru* zapisDoSuboru = new ZapisDoSuboru("cisla.txt");
+	zapisDoSuboru->zapis(poleCisel);
 
 	delete poleCisel;
+	delete zapisDoSuboru;
 	_CrtDumpMemoryLeaks();
 	return 0;
 }

@@ -55,9 +55,8 @@ int PoleCisel::getPocetCisel()
 
 PoleCisel::~PoleCisel()
 {
-	if (this->_poleCisel != nullptr)
+	if (_poleCisel)
 	{
-		delete[] this->_poleCisel;
+		delete[] _poleCisel;
 	}
-	this->_poleCisel = nullptr;
 }

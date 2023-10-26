@@ -19,5 +19,4 @@ void ZapisDoSuboru::zapis(PoleCisel* poleCisel)
 ZapisDoSuboru::~ZapisDoSuboru()
 {
 	delete _subor;
-	_subor = nullptr;
 }
