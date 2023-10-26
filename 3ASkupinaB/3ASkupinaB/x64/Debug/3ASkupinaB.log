@@ -1,0 +1,6 @@
+﻿  3ASkupinaB.cpp
+  CitacSuboru.cpp
+  Vypis.cpp
+  Generating Code...
+C:\Users\Danko\source\repos\3ASkupinaB\3ASkupinaB\CitacSuboru.cpp(47): warning C4715: 'CitacSuboru::vratNajvacsieCislo': not all control paths return a value
+  3ASkupinaB.vcxproj -> C:\Users\Danko\source\repos\3ASkupinaB\x64\Debug\3ASkupinaB.exe
